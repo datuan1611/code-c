@@ -1,0 +1,19 @@
+##Book: The C Programming Language (2nd Edition)
+
+#Chapter 1. A Tutorial Introduction
+
+P021:
+. Precedence of operator AND (&&) is just higher that operator OR (||)
+. Conditional expressions in AND / OR are evaluated from Left to Right.
+  Evaluation will stop as soon as the truth or falsehood is known.
+
+P030:
+. Detect the end of file by check: "(c=getchar()) != EOF"
+. When a string constant in C is stored as an array of characters containing the characters of the string and terminated with a '\0' to mark the end.
+  The %s format in PRINTF expects an argument as a string that is terminated by '\0'.
+  All of this implies that '\0' is not a part of normal text.
+  ->normal text: 'H' 'E' 'L' 'L' 'O' '\n'
+  ->string form: 'H' 'E' 'L' 'L' 'O' '\n' '\0'
+
+
+
