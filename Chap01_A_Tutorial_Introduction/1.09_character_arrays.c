@@ -53,6 +53,8 @@ int _getline(char s[], int lim)
 void _copy(char to[], char from[])
 {
 	int i;
+
+	i = 0;
 	while ((to[i] = from[i]) != '\0')
 		++i;
 }
