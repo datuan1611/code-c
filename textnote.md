@@ -34,3 +34,22 @@
   Declaration refers to the places where the nature of the variable is stated but no storage is allocated.
 . Relying too heavily on external variables is fraught with peril since it leads to programs whose data connections are not at all obvious - variables can be changed in unexpected and even inadvertent ways, and the program is hard to modify.
 
+
+#Chapter 2. Types, Operators, and Expressions
+
+##2.1. Variable Name
+. Variable name is created from letters and digits (1st chararter must be letter)
+  underscore is used as letter, 1st character in name -> often in library routine
+  lower case -> used for variable name
+  upper case -> used for symbolic constant
+  short name >> local variable, especially loop indices
+  long name >> external variable
+
+##2.2. Data Type and Size
+. Basic data type: char, int, float, double
+  short, long -> extension for integer
+  signed, unsigned -> extension for char, integer
+  (whether plain chars are signed or unsigned is machine-dependent, but printable chars are always positive)
+
+
+
