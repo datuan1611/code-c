@@ -51,5 +51,41 @@
   signed, unsigned -> extension for char, integer
   (whether plain chars are signed or unsigned is machine-dependent, but printable chars are always positive)
 
+#2.3. Constants
+. Suffixes using for number:
+  f/F : float		123.4F
+  l/L : long		12345L
+  u/U : unsigned	12345U
+  0   : octal		037
+  0x  : hexa		0xA4
+. Character constant is an integer, written as one character with single quotes ('x')
+  Characters with escape sequence can be represented in character or string constants:
+  \a : alert (bell)		\\ : backslash
+  \b : backspace		\? : question mark
+  \f : formfeed			\' : single quote
+  \n : newline			\" : double quote
+  \r : carriage return		\ooo	: octal number
+  \t : horizontal tab		\xhh	: hexadecimal number
+  \v : vertical tab
+. Constant expression involves only constant, is evaluated during compilation rather than run-time.
+	#define MAXLINE 1000
+. Enumeration constants is a list of constant integer values:
+	enum boolean { NO, YES };
+  unless explicit values are specified, first name in enum has value 0, the next 1, and so on
+  if some values are specified, unspecified values continue the progression from the last specified value
+-> Enum is better than #define: enum is convenient to associate constant values with name.
 
+#2.4. Declarations
+External and static variables are initialized to zero by default.
+Automatic variables have undefined (i.e., garbage) values unless explicit initializer.
+-> No automatic variables need initialize once only, must be a constant expression.
+   Automatic variables must be initialized each time entering their life-scope.
+
+#2.5. Arithmetic Operators
+#2.6. Relational and Logical Operators
+Precedence level of operators:
+   Arithmetic > Relational > Logical > Assignment
+   && > ||
+<Note>
+   Expressions connected by &&, || are evaluated from left to right, and stoped as soon as truth or falsehood is known.
 
