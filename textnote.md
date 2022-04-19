@@ -82,10 +82,28 @@ Automatic variables have undefined (i.e., garbage) values unless explicit initia
    Automatic variables must be initialized each time entering their life-scope.
 
 #2.5. Arithmetic Operators
+
 #2.6. Relational and Logical Operators
 Precedence level of operators:
    Arithmetic > Relational > Logical > Assignment
    && > ||
 <Note>
    Expressions connected by &&, || are evaluated from left to right, and stoped as soon as truth or falsehood is known.
+
+#2.7. Type Conversions
+
+#2.8. Increment and Decrement Operators
+. Difference between prefix operators (as in ++n/--n) and postfix operators (as in n++/n--)
+  ++n increments n before its value is used
+  n++ increments n after its value is used
+. Increment and decrement operators can only be applied for variables, an expression like (i+j)++ is illegal
+
+#2.9. Bitwise Operators
+. only use for integral operands: char, short, int and long (whether signed or unsigned)
+  &	bitwise AND
+  |	bitwise inclusive OR
+  ^	bitwise exclusive OR
+  <<	left shift
+  >>	right shift
+  ~	one's complement (unary)
 
