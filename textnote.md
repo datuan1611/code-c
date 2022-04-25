@@ -1,6 +1,6 @@
 #BOOK: THE C PROGRAMMING LANGUAGE (2nd Edition)
 
-#Chapter 1. A Tutorial Introduction
+#Chapter 1: A TUTORIAL INTRODUCTION
 
 ##P021:
 . Precedence of operator AND (&&) is just higher that operator OR (||)
@@ -35,7 +35,7 @@
 . Relying too heavily on external variables is fraught with peril since it leads to programs whose data connections are not at all obvious - variables can be changed in unexpected and even inadvertent ways, and the program is hard to modify.
 
 
-#Chapter 2. Types, Operators, and Expressions
+#Chapter 2: TYPES, OPERATORS AND EXPRESSIONS
 
 ##2.1. Variable Name
 . Variable name is created from letters and digits (1st chararter must be letter)
@@ -51,7 +51,7 @@
   signed, unsigned -> extension for char, integer
   (whether plain chars are signed or unsigned is machine-dependent, but printable chars are always positive)
 
-#2.3. Constants
+##2.3. Constants
 . Suffixes using for number:
   f/F : float		123.4F
   l/L : long		12345L
@@ -75,30 +75,30 @@
   if some values are specified, unspecified values continue the progression from the last specified value
 -> Enum is better than #define: enum is convenient to associate constant values with name.
 
-#2.4. Declarations
+##2.4. Declarations
 External and static variables are initialized to zero by default.
 Automatic variables have undefined (i.e., garbage) values unless explicit initializer.
 -> No automatic variables need initialize once only, must be a constant expression.
    Automatic variables must be initialized each time entering their life-scope.
 
-#2.5. Arithmetic Operators
+##2.5. Arithmetic Operators
 
-#2.6. Relational and Logical Operators
+##2.6. Relational and Logical Operators
 Precedence level of operators:
    Arithmetic > Relational > Logical > Assignment
    && > ||
 <Note>
    Expressions connected by &&, || are evaluated from left to right, and stoped as soon as truth or falsehood is known.
 
-#2.7. Type Conversions
+##2.7. Type Conversions
 
-#2.8. Increment and Decrement Operators
+##2.8. Increment and Decrement Operators
 . Difference between prefix operators (as in ++n/--n) and postfix operators (as in n++/n--)
   ++n increments n before its value is used
   n++ increments n after its value is used
 . Increment and decrement operators can only be applied for variables, an expression like (i+j)++ is illegal
 
-#2.9. Bitwise Operators
+##2.9. Bitwise Operators
 . only use for integral operands: char, short, int and long (whether signed or unsigned)
   &	bitwise AND
   |	bitwise inclusive OR
@@ -107,3 +107,17 @@ Precedence level of operators:
   >>	right shift
   ~	one's complement (unary)
 
+##2.10. Assignment Operators and Expressions
+
+##2.11. Conditional Expressions
+
+##2.12. Precedence and Order of Evaluation
+C language (like most languages) doesn't specify:
+. the order in which the operand of an operator are evaluated
+. the order in which function arguments are evaluated
+. function calls, nested assigment statements, increment and decrement operators cause "side-effects" - some variable is changed as a by-product of the evaluation of an expression
+-> Compilers can implement in different ways, and generate different answers => In that cases, best order depends strongly on "machine architecture"
+-> Should avoid writing code that depends on order of evaluation
+
+
+#Chapter 3: CONTROL FLOW
