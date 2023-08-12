@@ -1,13 +1,41 @@
-#BOOK: THE C PROGRAMMING LANGUAGE (2nd Edition)
+EBOOK: The C Programming (Second Edition)
 
-#Chapter 1: A TUTORIAL INTRODUCTION
+Author: Brian W. Kernighan, Dennis M. Ritchie
 
-##P021:
+Content:
+
+    Cover Page
+    Preface to the Digital Edition
+    Note from the Publisher
+    Title Page
+    Copyright Page
+    Contents
+    Preface
+    Preface to the First Edition
+    Introduction
+    Chapter 1: A Tutorial Introduction
+    Chapter 2: Types, Operators, and Expressions
+    Chapter 3: Control Flow
+    Chapter 4: Functions and Program Structure
+    Chapter 5: Pointers and Arrays
+    Chapter 6: Structures
+    Chapter 7: Input and Output
+    Chapter 8: The UNIX System Interface
+    Appendix A: Reference Manual
+    Appendix B: Standard Library
+    Appendix C: Summary of Changes
+    Index
+
+------------------------------------------------------------------------------
+
+Chapter 1: A TUTORIAL INTRODUCTION
+
+#P021:
 . Precedence of operator AND (&&) is just higher that operator OR (||)
 . Conditional expressions in AND / OR are evaluated from Left to Right.
   Evaluation will stop as soon as the truth or falsehood is known.
 
-##P030:
+#P030:
 . Detect the end of file by check: "(c=getchar()) != EOF"
 . When a string constant in C is stored as an array of characters containing the characters of the string and terminated with a '\0' to mark the end.
   The %s format in PRINTF expects an argument as a string that is terminated by '\0'.
@@ -15,7 +43,7 @@
   ->normal text: 'H' 'E' 'L' 'L' 'O' '\n'
   ->string form: 'H' 'E' 'L' 'L' 'O' '\n' '\0'
 
-##P031:
+#P031:
 . External variable must be "defined", exactly once, outside of any function; this sets aside storage for it.
   Variable must also be "declared" in each function that wants to access for it; this states the type of the variable.
   The declaration may be an explicit 'extern' statement or may be implicit from context.
@@ -34,10 +62,11 @@
   Declaration refers to the places where the nature of the variable is stated but no storage is allocated.
 . Relying too heavily on external variables is fraught with peril since it leads to programs whose data connections are not at all obvious - variables can be changed in unexpected and even inadvertent ways, and the program is hard to modify.
 
+------------------------------------------------------------------------------
 
-#Chapter 2: TYPES, OPERATORS AND EXPRESSIONS
+Chapter 2: TYPES, OPERATORS AND EXPRESSIONS
 
-##2.1. Variable Name
+#2.1. Variable Name
 . Variable name is created from letters and digits (1st chararter must be letter)
   underscore is used as letter, 1st character in name -> often in library routine
   lower case -> used for variable name
@@ -45,13 +74,13 @@
   short name >> local variable, especially loop indices
   long name >> external variable
 
-##2.2. Data Type and Size
+#2.2. Data Type and Size
 . Basic data type: char, int, float, double
   short, long -> extension for integer
   signed, unsigned -> extension for char, integer
   (whether plain chars are signed or unsigned is machine-dependent, but printable chars are always positive)
 
-##2.3. Constants
+#2.3. Constants
 . Suffixes using for number:
   f/F : float		123.4F
   l/L : long		12345L
@@ -75,30 +104,30 @@
   if some values are specified, unspecified values continue the progression from the last specified value
 -> Enum is better than #define: enum is convenient to associate constant values with name.
 
-##2.4. Declarations
+#2.4. Declarations
 External and static variables are initialized to zero by default.
 Automatic variables have undefined (i.e., garbage) values unless explicit initializer.
 -> No automatic variables need initialize once only, must be a constant expression.
    Automatic variables must be initialized each time entering their life-scope.
 
-##2.5. Arithmetic Operators
+#2.5. Arithmetic Operators
 
-##2.6. Relational and Logical Operators
+#2.6. Relational and Logical Operators
 Precedence level of operators:
    Arithmetic > Relational > Logical > Assignment
    && > ||
 <Note>
    Expressions connected by &&, || are evaluated from left to right, and stoped as soon as truth or falsehood is known.
 
-##2.7. Type Conversions
+#2.7. Type Conversions
 
-##2.8. Increment and Decrement Operators
+#2.8. Increment and Decrement Operators
 . Difference between prefix operators (as in ++n/--n) and postfix operators (as in n++/n--)
   ++n increments n before its value is used
   n++ increments n after its value is used
 . Increment and decrement operators can only be applied for variables, an expression like (i+j)++ is illegal
 
-##2.9. Bitwise Operators
+#2.9. Bitwise Operators
 . only use for integral operands: char, short, int and long (whether signed or unsigned)
   &	bitwise AND
   |	bitwise inclusive OR
@@ -107,11 +136,11 @@ Precedence level of operators:
   >>	right shift
   ~	one's complement (unary)
 
-##2.10. Assignment Operators and Expressions
+#2.10. Assignment Operators and Expressions
 
-##2.11. Conditional Expressions
+#2.11. Conditional Expressions
 
-##2.12. Precedence and Order of Evaluation
+#2.12. Precedence and Order of Evaluation
 C language (like most languages) doesn't specify:
 . the order in which the operand of an operator are evaluated
 . the order in which function arguments are evaluated
@@ -119,5 +148,6 @@ C language (like most languages) doesn't specify:
 -> Compilers can implement in different ways, and generate different answers => In that cases, best order depends strongly on "machine architecture"
 -> Should avoid writing code that depends on order of evaluation
 
+------------------------------------------------------------------------------
 
-#Chapter 3: CONTROL FLOW
+Chapter 3: CONTROL FLOW
