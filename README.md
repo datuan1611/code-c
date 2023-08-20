@@ -9,3 +9,4 @@
 1. [thân triệu] Học lập trình C - https://youtube.com/playlist?list=PLE1qPKuGSJaBq4VFzTYrhzCiPvCoI8JDv
 
 ## Extra
+1. Makefile

@@ -1,0 +1,10 @@
+MAKEFILE
+
+#1. A Simple Makefile Tutorial
+refer: https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+
+./ex01
+./ex02
+./ex03
+./ex04
+./ex05
